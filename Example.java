@@ -10,6 +10,7 @@ public class Example {
 
     System.out.println("\n preOrder -> ");
     preOrder(root);
+    
     System.out.println("\n Iterative preOrder -> ");
     iterativePreOrder(root);
     System.out.println("\n postOrder -> ");
