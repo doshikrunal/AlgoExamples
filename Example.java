@@ -51,17 +51,17 @@ public class Example {
 
   public static void iterativePostOrder(Node node) {
     Stack<Node> parentStack = new Stack<Node>();
-    Node lastVisitedNode = null;
+    Node lastVisitedNode =null, peekNode;
     while(node!=null || !parentStack.isEmpty()) {
       if(node!=null) {
         parentStack.push(node);
         node = node.left;
       } else {
-        node = parentStack.peek();
-        if(node.right != null && node.right!=lastVisitedNode) {
-          node = node.right;
+        peekNode = parentStack.peek();
+        if(peekNode.right != null && peekNode.right!=lastVisitedNode) {
+          node = peekNode.right;
         } else {
-          System.out.print(node.data + "*");
+          System.out.print(peekNode.data + "*");
           lastVisitedNode = parentStack.pop();
         }
       }
