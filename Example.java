@@ -6,11 +6,10 @@ public class Example {
     Node<Integer> x = new Node<Integer>(10);
     int len=0;
     Node root = getBinaryTree(true);
-    //System.out.println("height ->" + getHeight(root));
-
+    System.out.println("\n height ->" +
+    getHeight(root));
     System.out.println("\n preOrder -> ");
     preOrder(root);
-    
     System.out.println("\n Iterative preOrder -> ");
     iterativePreOrder(root);
     System.out.println("\n postOrder -> ");
